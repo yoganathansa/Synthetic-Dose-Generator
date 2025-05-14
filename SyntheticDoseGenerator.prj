@@ -1,0 +1,85 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration file="Y:\HHN\RP\All_Site_App\Dose Generator.prj" location="Y:\HHN\RP\All_Site_App" name="Dose Generator" target="target.mlapps" target-name="Package App">
+    <param.appname>Dose Generator</param.appname>
+    <param.authnamewatermark>Yoganathan, SA, Dr.</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.icon />
+    <param.icons />
+    <param.summary>Radiation Oncology
+Saint John Regional Hospital,
+Horizon Health Network
+Saint John
+New Brunswick
+Canada</param.summary>
+    <param.description>it generates dose distribution and write into dicom file. The synthetically created dose distribution can be used to build a robust Rapidplan model in Eclipse TPS. Input needed: CT+RT Structures + RT plan + RT Dose all in dicom file in a folder. 
+1. Load the 'Dicom' Folder
+2. The system will read all the contours in the 'RT Structure' list
+3. Select the PTV(s), CTV(s) and OAR(s) that you want to consider while creating dose distribution
+4. Enter the prescribed doses for the selected PTV(s)
+5. View the dose distribution, if you are happy, write into a dicom file (file name with prefix: sDOSE_RP_.........)
+6. Remove the original dicom-dose file and keep only sDOSE_RP_........dcm 
+7. Import the whole folder (CT, RT structure, RT plan and new Dose) into TPS</param.description>
+    <param.screenshot>C:\Users\DELL\AppData\Local\Temp\tp70a088f2_c581_4cf3_8d87_ee9df5c044c9.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>2613f83f-e99d-4914-824c-7744b75f764b</param.guid>
+    <unset>
+      <param.email />
+      <param.company />
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\RP_All_Site.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\cropped-Horizon_Logo_CMYK.png</file>
+      <file>${PROJECT_ROOT}\Hospital-Exterior_Morning-6.jpg</file>
+      <file>${PROJECT_ROOT}\pic_app.JPG</file>
+      <file>Y:\Matlab_codes\imshow3D.m\imshow3D.m</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="Y:\HHN\RP" name="All_Site_App" optional="false">Y:\HHN\RP\All_Site_App</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2024a</root>
+      <toolboxes>
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
